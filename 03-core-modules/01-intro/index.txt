@@ -1,0 +1,10 @@
+
+Os Core Modules são módulos nativos do própio node
+Eles são fundamentais para criação de softwares em node
+
+Existem diversos core modules os principais são:
+
+http: Módulo para criação de servidores http
+path: Extrair informações de paths(caminhos) de arquivos
+fs: File System responsável pela leitura e escrita de arquivos
+url: Módulo para trabalhar com URLs
