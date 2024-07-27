@@ -1,0 +1,14 @@
+{
+  "name": "primeiro-projeto",
+  "version": "1.1.1",
+  "description": "Meu primeiro projeto com NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NPM"
+  ],
+  "author": "Alean Rocha",
+  "license": "MIT"
+}
