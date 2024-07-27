@@ -1,0 +1,1 @@
+console.log('Removendo pacotes com - npm uninstall <nomedopacote>')
