@@ -1,0 +1,8 @@
+<h1>Blog de programação</h1>
+{{#with post}}
+  <p>Título: {{title}}</p>
+  <p>Categoria: {{category}}</p>
+  <p>Descrição: {{body}}</p>
+  <p>Comentários: <ol>{{#each comments}} <li>{{this}}</li> {{/each}}</ol></p>
+{{/with}}
+
