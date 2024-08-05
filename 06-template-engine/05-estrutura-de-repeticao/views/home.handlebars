@@ -1,0 +1,9 @@
+<h1>Hello, Handlebars!</h1>
+<h3>Olá {{user.name}} {{user.surname}}, seja bem vindo!</h3>
+<p>{{message}}</p>
+
+{{#if auth}}
+  <p>Vocẽ pode acessar seu dashbord <a href="./dashbord">aqui.</a></p>
+{{else}}
+  <p>Vocẽ não tem acesso ao dashbord.</p>
+{{/if}}
