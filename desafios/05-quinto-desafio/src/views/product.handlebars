@@ -1,0 +1,13 @@
+<h2>Produto: {{product.name}}</h2>
+
+{{#with product}}
+  <div class="products">
+    <div class="product">
+      <h3>{{name}}</h3>
+      <p>Categoria: {{category}}</p>
+      <p>Preço R${{price}}</p>
+      <a href='/'>Voltar</a>
+    </div>
+  </div>
+{{/with}}
+
