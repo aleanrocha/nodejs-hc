@@ -1,0 +1,16 @@
+<section class="book-container">
+  <h2>Conheça melhor o seu próximo livro</h2>
+  <div class="book">
+    <span>#{{book.id}}</span>
+    <h3>Título: {{book.title}}</h3>
+    <p>Totai de páginas: {{book.pageqty}}</p>
+  </div>
+  <div class="display: flex;">
+    <a href="/books" class="back">Voltar</a>
+    <a href="/book/edit/{{book.id}}" class="back">Editar</a>
+    <form action="/book/deletebook" method="post" style="margin-top: 1rem;">
+      <input type="hidden" name="id" value="{{book.id}}">
+      <input type="submit" value="Remover" class="back">
+    </form>
+  </div>
+</section>
