@@ -1,0 +1,13 @@
+<section class="sec-books">
+  <h1>Conheça os melhores livros da atualidade</h1>
+  <section class='books'>
+    {{#each data}}
+      <div class='book'>
+        <span>{{this.id}}</span>
+        <p>Livro</p>
+        <h3>{{this.title}}</h3>
+        <p>Páginas: {{this.pageqty}}</p>
+      </div>
+    {{/each}}
+  </section>
+</section>
