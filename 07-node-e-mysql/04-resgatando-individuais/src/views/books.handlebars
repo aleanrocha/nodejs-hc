@@ -1,0 +1,24 @@
+<section class="sec-books">
+  <form action="/books" method="get">
+    <input type="text" name="search" id="search" value="{{search}}" placeholder="Digite o título do livro" required>
+    <input type="submit" value="OK">
+  </form>
+  <h1>Conheça os melhores livros da atualidade</h1>
+  <section class='books'>
+    {{#if data}}
+      {{#each data}}
+        <div class='book'>
+          <span>{{this.id}}</span>
+          <p>Livro</p>
+          <h3><a href="/book/{{this.id}}">{{this.title}}</a></h3>
+          <p>Páginas: {{this.pageqty}}</p>
+        </div>
+      {{/each}}
+    {{else}}
+    <div class="not-found">
+      <p>Ops, esse livro não existe!</p>
+      <a href="/books" class="back">Voltar</a>
+    </div>
+    {{/if}}
+  </section>
+</section>
