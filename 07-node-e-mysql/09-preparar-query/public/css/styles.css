@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+header {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: gray;
+  color: #fafafa;
+
+  display: flex;
+  justify-content: space-between;
+
+  > h1 {
+    font-size: 1.2rem;
+  }
+
+  > nav a {
+    color: #fafafa;
+    margin-right: 1rem;
+  }
+}
+
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sec-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: lightgray;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.form-control {
+  display: grid;
+  text-align: left;
+  gap: 0.5rem;
+  width: 80%;
+
+  > input {
+    padding: 0.6rem;
+    width: 100%;
+  }
+
+  > input[type=submit] {
+    background-color: darkgray;
+    cursor: pointer;
+    margin: 1.5rem 0;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
+.sec-books h1 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.books {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.book {
+  width: 180px;
+  background-color: lightgray;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  
+  display: grid;
+  gap: 0.4rem;
+
+  position: relative;
+
+  > span {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-weight: bold;
+  }
+}
+
+.sec-books form {
+  width: 100%;
+  max-width: 480px;
+  margin: 1rem auto;
+
+  display: flex;
+
+  > input {
+    padding: 0.8rem;
+    width: 100%;
+  }
+
+  > input[type=submit] {
+    width: 90px;
+  }
+  
+}
+
+.sec-books .not-found {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.back {
+  text-decoration: none;
+  background-color: lightgray;
+  color: #000;
+  font-weight: bold;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  border: none;
+}
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
