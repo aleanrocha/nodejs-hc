@@ -1,0 +1,13 @@
+<section class="sec-users">
+  <h2>Usuários</h2>
+  <div class="users">
+  {{#each users}}
+    <div class="user">
+      <span>#{{this.id}}</span>
+      <h3>{{this.name}}</h3>
+      <p>{{this.occupation}}</p>
+      <p>Promoções: {{#if newsletter}} Ativado {{else}} Desativado {{/if}}</p>
+    </div>
+  {{/each}}
+  </div>
+</section>
