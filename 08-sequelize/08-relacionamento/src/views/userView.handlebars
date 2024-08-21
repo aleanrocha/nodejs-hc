@@ -1,0 +1,15 @@
+<section>
+  <h2>Mais sobre o usuário: {{user.name}}</h2>
+  <div class="user-view">
+    <h3>Nome: {{user.name}}</h3>
+    <p>Profissão: {{user.occupation}}</p>
+    <p>Receber promoções: {{#if user.newsletter}} Ativado {{else}} Desativado {{/if}}</p>
+    <a href="/users" class="back">Voltar</a>
+    <form action="/user/delete" method="post">
+      <input type="hidden" name="id" value="{{user.id}}">
+      <input type="submit" value="Remover" class="back input">
+    </form>
+    <!--<a href="/user/delete/{{user.id}}" class="back">Remover</a>-->
+    <a href="/user/edit/{{user.id}}" class="back">Editar</a>
+  </div>
+</section>
