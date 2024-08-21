@@ -100,6 +100,7 @@ app.post('/user/update', async (req, res) => {
 
 conn
   .sync()
+  //.sync({ force: true}) // recriação do banco - força a reconstrução das tabelas
   .then(() => {
     app.listen(port, () => console.log('Server started on port %s', port))
   })
