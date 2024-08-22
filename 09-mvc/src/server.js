@@ -2,6 +2,7 @@ const express = require('express')
 const exhbs = require('express-handlebars')
 
 const conn = require('./db/conn')
+const Task = require('./models/Task')
 
 const server = express()
 const port = 3001
@@ -19,4 +20,9 @@ server.get('/', (req, res) => {
   return res.send('Hello World')
 })
 
-server.listen(port, () => console.log('Server started on port %s', port))
+conn
+  .sync()
+  .then(() => {
+    server.listen(port, () => console.log('Server started on port %s', port))
+  })
+  .catch((err) => console.log(err))
