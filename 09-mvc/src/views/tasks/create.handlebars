@@ -1,3 +1,28 @@
-<section class="create-task">
-  <h2>Criação da tarefa</h2>
+<section class='sec-form'>
+  <h2>O que você vai fazer hoje?</h2>
+  <form action='/tasks/create' method='post' class='form'>
+    <div class='form-control'>
+      <label for='title'>Título</label>
+      <input
+        type='text'
+        name='title'
+        id='title'
+        placeholder='Qual o título da tarefa'
+        required
+      />
+    </div>
+    <div class='form-control'>
+      <label for='description'>Descrição</label>
+      <textarea
+        type='text'
+        name='description'
+        id='description'
+        placeholder='O que vocẽ pretende fazer'
+        required
+      ></textarea>
+    </div>
+    <div class='form-control'>
+      <input type='submit' value='Criar tarefa' />
+    </div>
+  </form>
 </section>

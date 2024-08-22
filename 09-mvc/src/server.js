@@ -12,7 +12,7 @@ const port = 3001
 server.use(express.urlencoded({ extended: true }))
 server.use(express.json())
 
-server.set(express.static('public'))
+server.use(express.static('public'))
 
 server.engine('handlebars', exhbs.engine())
 server.set('view engine', 'handlebars')
