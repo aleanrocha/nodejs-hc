@@ -49,9 +49,14 @@ app.get('/users', async (req, res) => {
 
 // obter usuário pelo id
 app.get('/user/:id', async (req, res) => {
-  const id = req.params.id
-  const user = await User.findOne({ raw: true, where: { id: id } })
-  return res.render('userView', { user })
+  try {
+    const id = req.params.id
+    const user = await User.findOne({ include: Address, where: { id: id } })
+    console.log(user.get( { plain: true } ))
+    return res.render('userView', { user: user.get( { plain: true } ) })
+  } catch (error) {
+    console.log(error)
+  }
 })
 
 //remover usuário por id
@@ -99,9 +104,22 @@ app.post('/user/update', async (req, res) => {
   return res.redirect('/users')
 })
 
+// relacionamento 
+app.post('/address/create', async (req, res) => {
+  const { UserId, street, number, city } = req.body
+  const addressData = {
+    UserId,
+    street, 
+    number,
+    city
+  }
+  await Address.create(addressData)
+  return res.redirect('/users')
+})
+
 conn
-  //.sync()
-  .sync({ force: true}) // recriação do banco - força a reconstrução das tabelas
+  .sync()
+  //.sync({ force: true}) // recriação do banco - força a reconstrução das tabelas
   .then(() => {
     app.listen(port, () => console.log('Server started on port %s', port))
   })

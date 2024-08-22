@@ -22,4 +22,23 @@
       <input type="submit" value="Cadastrar">
     </div>
   </form>
+  <h2>Endereço do usuário</h2>
+  <form action="/address/create" method="post" class="form">
+    <input type="hidden" name="UserId" value="{{user.id}}">
+    <div class="form-control">
+      <label for="street">Rua</label>
+      <input type="text" name="street" id="street" placeholder="Digite o nome da rua" required>
+    </div>
+    <div class="form-control">
+      <label for="number">Número</label>
+      <input type="text" name="number" id="number" placeholder="Digite o número da casa" required>
+    </div>
+    <div class="form-control">
+      <label for="city">Cidade</label>
+      <input type="text" name="city" id="city" placeholder="Digite sua cidade" required>
+    </div>
+    <div class="form-control">
+      <input type="submit" value="Incluir endereço">
+    </div>
+  </form>
 </section>

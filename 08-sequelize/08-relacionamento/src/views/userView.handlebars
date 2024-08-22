@@ -4,6 +4,14 @@
     <h3>Nome: {{user.name}}</h3>
     <p>Profissão: {{user.occupation}}</p>
     <p>Receber promoções: {{#if user.newsletter}} Ativado {{else}} Desativado {{/if}}</p>
+    {{#if user.Addresses }}
+      <h3>Endereço completo</h3>
+      {{#each user.Addresses}}
+        <p>Rua: {{this.street}}</p>
+        <p>Numero da residẽncia: {{this.number}}</p>
+        <p>Cidade: {{this.city}}</p>
+      {{/each}}
+    {{/if}}
     <a href="/users" class="back">Voltar</a>
     <form action="/user/delete" method="post">
       <input type="hidden" name="id" value="{{user.id}}">
