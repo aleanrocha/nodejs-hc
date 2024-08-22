@@ -114,7 +114,14 @@ app.post('/address/create', async (req, res) => {
     city
   }
   await Address.create(addressData)
-  return res.redirect('/users')
+  return res.redirect(`/user/${UserId}`)
+})
+
+// deletar endereço relacionado
+app.post('/address/delete', async (req, res) => {
+  const { id, UserId } = req.body
+  await Address.destroy({ where: { id: id }})
+  return res.redirect(`/user/${UserId}`)
 })
 
 conn

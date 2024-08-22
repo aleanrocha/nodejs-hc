@@ -7,9 +7,16 @@
     {{#if user.Addresses }}
       <h3>Endereço completo</h3>
       {{#each user.Addresses}}
-        <p>Rua: {{this.street}}</p>
-        <p>Numero da residẽncia: {{this.number}}</p>
-        <p>Cidade: {{this.city}}</p>
+        <div class="address">
+          <p>Rua: {{this.street}}</p>
+          <p>Numero da residẽncia: {{this.number}}</p>
+          <p>Cidade: {{this.city}}</p>
+          <form action="/address/delete" method="post">
+            <input type="hidden" name="id" value="{{this.id}}">
+            <input type="hidden" name="UserId" value="{{this.UserId}}">
+            <input type="submit" value="Apagar" class="back" >
+          </form>
+        </div>
       {{/each}}
     {{/if}}
     <a href="/users" class="back">Voltar</a>
