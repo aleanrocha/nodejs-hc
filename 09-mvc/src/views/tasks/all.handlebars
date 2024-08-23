@@ -1,3 +1,18 @@
-<section class="tasks">
+<section class='tasks'>
   <h2>Tarefas</h2>
+  <ul>
+    {{#each tasks}}
+      <li>
+        <div class='task-content'>
+          <h3 class='task-title'>{{this.title}}</h3>
+          <p class='task-description'>{{this.description}}</p>
+        </div>
+        <div class='task-options'>
+          <a href='/' class="check"><i class='bi bi-check2'></i></a>
+          <a href='/' class="pencil"><i class='bi bi-pencil'></i></a>
+          <a href='/' class="x"><i class='bi bi-x-lg'></i></a>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
 </section>
