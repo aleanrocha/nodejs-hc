@@ -18,6 +18,7 @@ server.engine('handlebars', exhbs.engine())
 server.set('view engine', 'handlebars')
 server.set('views', './src/views')
 
+server.get('/', (_, res) => res.redirect('/tasks/add'))
 server.use('/tasks', tasksRoutes)
 
 conn
