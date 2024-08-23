@@ -31,4 +31,11 @@ module.exports = class TaskController {
     const task = await Task.findOne({ raw: true, where: { id: id } })
     res.render('tasks/edit', { task })
   }
+
+  static async updateTask(req, res) {
+    const { id, title, description } = req.body
+    const taskData = { title, description }
+    await Task.update(taskData, { where: { id: id } })
+    res.redirect('/tasks')
+  }
 } 
