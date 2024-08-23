@@ -7,6 +7,7 @@ router.get('/', TaskController.showTasks)
 
 router.get('/add', TaskController.createTask)
 router.post('/save', TaskController.saveTask)
+router.post('/delete', TaskController.deleteTask)
 
 
 module.exports = router

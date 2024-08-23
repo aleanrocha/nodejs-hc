@@ -10,7 +10,12 @@
         <div class='task-options'>
           <a href='/' class="check"><i class='bi bi-check2'></i></a>
           <a href='/' class="pencil"><i class='bi bi-pencil'></i></a>
-          <a href='/' class="x"><i class='bi bi-x-lg'></i></a>
+          <form action="/tasks/delete" method="post">
+            <input type="hidden" name="id" value="{{this.id}}">
+            <button type="submit" class="x">
+              <i class='bi bi-x-lg'></i>
+            </button>
+          </form>
         </div>
       </li>
     {{/each}}
