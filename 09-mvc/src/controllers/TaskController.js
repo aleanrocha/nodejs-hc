@@ -25,4 +25,10 @@ module.exports = class TaskController {
     await Task.destroy({ where: { id: id } })
     res.redirect('/tasks')
   }
-}
+
+  static async editTask(req, res) {
+    const id = req.params.id
+    const task = await Task.findOne({ raw: true, where: { id: id } })
+    res.render('tasks/edit', { task })
+  }
+} 

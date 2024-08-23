@@ -1,0 +1,29 @@
+<section class='sec-form'>
+  <h2>Editar tarefa</h2>
+  <form action='/tasks/update' method='post' class='form'>
+    <div class='form-control'>
+      <label for='title'>Título</label>
+      <input
+        type='text'
+        name='title'
+        id='title'
+        placeholder='Qual o título da tarefa'
+        value="{{task.title}}"
+        required
+      />
+    </div>
+    <div class='form-control'>
+      <label for='description'>Descrição</label>
+      <textarea
+        type='text'
+        name='description'
+        id='description'
+        placeholder='O que vocẽ pretende fazer'
+        required
+      >{{task.description}}</textarea>
+    </div>
+    <div class='form-control'>
+      <input type='submit' value='Salvar edição' />
+    </div>
+  </form>
+</section>

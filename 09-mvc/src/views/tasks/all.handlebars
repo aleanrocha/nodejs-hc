@@ -4,14 +4,14 @@
     {{#each tasks}}
       <li>
         <div class='task-content'>
-          <h3 class='task-title'>{{this.title}}</h3>
-          <p class='task-description'>{{this.description}}</p>
+          <h3 class='task-title'>{{task.title}}</h3>
+          <p class='task-description'>{{task.description}}</p>
         </div>
         <div class='task-options'>
           <a href='/' class="check"><i class='bi bi-check2'></i></a>
-          <a href='/' class="pencil"><i class='bi bi-pencil'></i></a>
+          <a href='/tasks/edit/{{task.id}}' class="pencil"><i class='bi bi-pencil'></i></a>
           <form action="/tasks/delete" method="post">
-            <input type="hidden" name="id" value="{{this.id}}">
+            <input type="hidden" name="id" value="{{task.id}}">
             <button type="submit" class="x">
               <i class='bi bi-x-lg'></i>
             </button>
