@@ -38,4 +38,16 @@ module.exports = class TaskController {
     await Task.update(taskData, { where: { id: id } })
     res.redirect('/tasks')
   }
+
+  static async doneTask(req, res) {
+    const id = req.body.id
+    const task = await Task.findOne({ raw: true, where: { id: id } })
+    if (task.done === 0) {
+      await Task.update({ done: true }, { where: { id: id } })
+    }
+    if (task.done === 1) {
+      await Task.update({ done: false }, { where: { id: id } })
+    }
+    res.redirect('/tasks')
+  }
 } 

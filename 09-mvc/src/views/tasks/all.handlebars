@@ -3,13 +3,18 @@
   {{#if tasks}}
     <ul>
       {{#each tasks}}
-        <li>
+        <li {{#if this.done}} class="done" {{/if}}>
           <div class='task-content'>
             <h3 class='task-title'>{{this.title}}</h3>
             <p class='task-description'>{{this.description}}</p>
           </div>
           <div class='task-options'>
-            <a href='/' class='check'><i class='bi bi-check2'></i></a>
+            <form action="/tasks/done" method="post">
+              <input type="hidden" name="id" value="{{this.id}}">
+              <button type="submit" class="check">
+                <i class='bi bi-check2'></i>
+              </button>
+            </form>
             <a href='/tasks/edit/{{this.id}}' class='pencil'><i
                 class='bi bi-pencil'
               ></i></a>
