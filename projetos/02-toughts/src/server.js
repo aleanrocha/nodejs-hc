@@ -3,7 +3,9 @@ const session = require('express-session')
 const flash = require('express-flash')
 const fileStore = require('session-file-store')(session)
 const exhbs = require('express-handlebars')
+
 const conn = require('./db/conn')
+const toughtsRoutes = require('./routes/toughtsRoutes')
 
 const server = express()
 const port = 3001
@@ -50,11 +52,12 @@ server.use((req, res, next) => {
   if (req.session.userId) {
     res.locals.session = req.session
   }
+  next()
 })
 
-server.get('/', (req, res) => {
-  res.send('Hello World')
-})
+// routes
+server.get('/', (_req, res) => {return res.redirect('/toughts')})
+server.use('/toughts', toughtsRoutes)
 
 conn
   .sync()
