@@ -8,6 +8,10 @@ const conn = require('./db/conn')
 const server = express()
 const port = 3001
 
+// create table 
+require('./models/Tought')
+require('./models/User')
+
 // template engine
 server.engine('handlebars', exhbs.engine())
 server.set('view engine', 'handlebars')
