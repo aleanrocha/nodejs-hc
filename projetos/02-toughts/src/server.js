@@ -5,7 +5,10 @@ const fileStore = require('session-file-store')(session)
 const exhbs = require('express-handlebars')
 
 const conn = require('./db/conn')
+
+// routes
 const toughtsRoutes = require('./routes/toughtsRoutes')
+const authRoutes = require('./routes/authRoutes')
 
 const server = express()
 const port = 3001
@@ -58,6 +61,7 @@ server.use((req, res, next) => {
 // routes
 server.get('/', (_req, res) => {return res.redirect('/toughts')})
 server.use('/toughts', toughtsRoutes)
+server.use('/', authRoutes)
 
 conn
   .sync()
