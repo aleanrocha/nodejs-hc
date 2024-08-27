@@ -61,6 +61,10 @@ main {
   border-radius: 0.3rem;
   font-weight: bold;
 }
+.message.success_message {
+  background-color: #34cf78;
+  margin: 1rem auto;
+}
 
 /* Auth Container */
 

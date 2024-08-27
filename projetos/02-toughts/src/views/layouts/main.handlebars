@@ -15,14 +15,24 @@
       <a href="/"><img src="/assets/toughts_logo.png" alt="Toughts logo"></a>
       <nav>
         <a href="/">Pensamentos</a>
-        <a href="/register">Cadastrar</a>
-        <a href="/login">Entrar</a>
+        {{#if session.userId}}
+          <a href="/toughts/dashbord">Dashbord</a>
+          <a href="/toughts/logout">Sair</a>
+        {{else}}
+          <a href="/register">Cadastrar</a>
+          <a href="/login">Entrar</a>
+        {{/if}}
       </nav>
     </header>
     <main>
-      {{#if messages.message}}
-        <div class="message">
-          {{messages.message}}
+      {{#if messages.error_message}}
+        <div class="message error_message">
+          {{messages.error_message}}
+        </div>
+      {{/if}}
+      {{#if messages.success_message}}
+        <div class="message success_message">
+          {{messages.success_message}}
         </div>
       {{/if}}
       {{{body}}}
