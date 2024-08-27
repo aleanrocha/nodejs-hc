@@ -51,6 +51,17 @@ main {
   text-align: center;
 }
 
+/* Flash messages */
+
+.message {
+  background-color: #f06e6e;
+  padding: 1rem;
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: 0.3rem;
+  font-weight: bold;
+}
+
 /* Auth Container */
 
 .sec-auth {
