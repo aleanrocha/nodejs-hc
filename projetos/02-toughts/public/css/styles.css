@@ -1,3 +1,5 @@
+/* Globals */
+
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +23,8 @@ a:hover {
   color: #ff7b00;
 }
 
+/* Header */
+
 header, footer {
   display: flex;
   justify-content: space-around;
@@ -39,11 +43,69 @@ header nav {
   gap: 1rem;
 }
 
+/* Principal */
+
 main {
   padding: 2rem;
   min-height: 80vh;
   text-align: center;
 }
+
+/* Auth Container */
+
+.sec-auth {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.sec-auth h2 {
+  font-size: 1.7rem;
+  border-left: 4px solid #ff7b00;
+  padding-left: 0.5rem;
+}
+
+.sec-auth form, .form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.sec-auth form input {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #ff7b00;
+  padding: 0.8rem;
+  margin-bottom: 0.4rem;
+  outline: none;
+  border-radius: 0.3rem;
+}
+
+.sec-auth form input:focus {
+  box-shadow: 1px 1px 8px #ff7b00;
+}
+
+.sec-auth form input[type=submit] {
+  max-width: 130px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.sec-auth form input[type=submit]:hover {
+  box-shadow: 0 0 9px #ff7b00;
+  color: #ff7b00;
+}
+
+/* Footer */
 
 footer {
   border: none;
