@@ -92,7 +92,7 @@ main {
   gap: 0.6rem;
 }
 
-.sec-auth form input {
+.sec-auth form input, .btn {
   background-color: transparent;
   color: #fff;
   border: 2px solid #ff7b00;
@@ -106,7 +106,7 @@ main {
   box-shadow: 1px 1px 8px #ff7b00;
 }
 
-.sec-auth form input[type=submit] {
+.sec-auth form input[type=submit], .btn {
   max-width: 130px;
   font-size: 1rem;
   font-weight: bold;
@@ -115,7 +115,7 @@ main {
   transition: 0.1s;
 }
 
-.sec-auth form input[type=submit]:hover {
+.sec-auth form input[type=submit]:hover, .btn:hover {
   box-shadow: 0 0 9px #ff7b00;
   color: #ff7b00;
 }
